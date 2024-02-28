@@ -1,6 +1,9 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-android")
+    id("kotlin-kapt")
+    id("kotlin-parcelize")
 }
 
 android {
@@ -66,4 +69,60 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+
+
+    // Multidex
+    implementation("androidx.multidex:multidex:2.0.1")
+
+    // Image Size Compressor
+    implementation("id.zelory:compressor:3.0.1")
+
+    // Room
+    implementation ("androidx.room:room-runtime:2.6.1")
+    kapt ("androidx.room:room-compiler:2.6.1")
+
+    // optional - Kotlin Extensions and Coroutines support for Room
+    implementation ("androidx.room:room-ktx:2.6.1")
+
+    //Koin
+    implementation("io.insert-koin:koin-androidx-compose:3.4.0")
+
+    // ViewModel
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
+
+    // LiveData
+    implementation("androidx.compose.runtime:runtime-livedata:1.6.2")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
+
+    // Coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+
+    //Datastore Preferences
+    implementation("androidx.datastore:datastore-preferences:1.0.0")
+
+    //Navigation
+    implementation("androidx.navigation:navigation-compose:2.7.7")
+
+    // Coil
+    implementation("io.coil-kt:coil-compose:2.5.0")
+
+    // Drawbox
+    implementation("io.ak1:drawbox:1.0.3")
+
+    // Snapper
+    implementation("dev.chrisbanes.snapper:snapper:0.3.0")
+
+    //RangVikalp
+    implementation("io.ak1:rang-vikalp:1.0.0-alpha02")
+
+    // Gson
+    implementation("com.google.code.gson:gson:2.10.1")
+
+    // Accompanist
+    //Jetpack Navigation Compose Material
+    implementation("com.google.accompanist:accompanist-navigation-material:0.28.0")
+    //Permissions
+    implementation("com.google.accompanist:accompanist-permissions:0.28.0")
+
+
 }
