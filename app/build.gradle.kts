@@ -25,7 +25,9 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            resValue("string","paper_file_provider","io.xangar.paper.file_provider")
+            isMinifyEnabled = true
+            isShrinkResources = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"

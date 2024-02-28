@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">XangarsAssignment</string>
+    <string name="paper_file_provider">io.xangar.paper.file_provider</string>
 </resources>
