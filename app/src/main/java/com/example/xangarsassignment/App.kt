@@ -1,6 +1,10 @@
 package com.example.xangarsassignment
 
 import android.app.Application
+import com.example.xangarsassignment.di.databaseModule
+import com.example.xangarsassignment.di.repositories
+import com.example.xangarsassignment.di.utils
+import com.example.xangarsassignment.di.viewModel
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
@@ -10,9 +14,7 @@ class App : Application() {
         startKoin {
             //Inject Android context here
             androidContext(applicationContext)
-            TODO(
-                // Add all modules when created
-            )
+            koin.loadModules(listOf(databaseModule, viewModel, repositories, utils))
         }
     }
 }

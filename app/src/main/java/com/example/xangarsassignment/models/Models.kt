@@ -1,7 +1,9 @@
+package com.example.xangarsassignment.models
 
 import android.graphics.Bitmap
 import android.os.Parcelable
 import androidx.room.*
+import convert
 import kotlinx.parcelize.Parcelize
 import java.util.*
 

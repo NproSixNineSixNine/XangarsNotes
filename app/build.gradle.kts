@@ -21,11 +21,16 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+        kapt {
+            arguments {
+                arg("room.schemaLocation", "$projectDir/schemas")
+            }
+        }
+
     }
 
     buildTypes {
         release {
-            resValue("string","paper_file_provider","io.xangar.paper.file_provider")
             isMinifyEnabled = true
             isShrinkResources = true
             proguardFiles(
@@ -80,8 +85,8 @@ dependencies {
     implementation("id.zelory:compressor:3.0.1")
 
     // Room
-    implementation ("androidx.room:room-runtime:2.6.1")
-    kapt ("androidx.room:room-compiler:2.6.1")
+    implementation("androidx.room:room-runtime:2.6.1")
+    kapt("androidx.room:room-compiler:2.6.1")
 
     // optional - Kotlin Extensions and Coroutines support for Room
     implementation ("androidx.room:room-ktx:2.6.1")
@@ -122,9 +127,9 @@ dependencies {
 
     // Accompanist
     //Jetpack Navigation Compose Material
-    implementation("com.google.accompanist:accompanist-navigation-material:0.28.0")
+    implementation("com.google.accompanist:accompanist-navigation-material:0.34.0")
     //Permissions
-    implementation("com.google.accompanist:accompanist-permissions:0.28.0")
+    implementation("com.google.accompanist:accompanist-permissions:0.34.0")
 
 
 }
